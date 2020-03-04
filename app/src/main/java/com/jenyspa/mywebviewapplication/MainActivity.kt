@@ -50,6 +50,11 @@ class MainActivity : AppCompatActivity() {
             saveSharedPreference("clickAmericanas")
             goToActivity("https://www.americanas.com.br/")
         }
+
+        button_about.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     fun goToActivity(url: String) {
