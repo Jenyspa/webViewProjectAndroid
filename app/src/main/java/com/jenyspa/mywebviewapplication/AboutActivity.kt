@@ -13,13 +13,13 @@ class AboutActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("statistics", Context.MODE_PRIVATE)
 
-        magalu.text = getString(R.string.statistics_company_clicks, "Magalu", sharedPreferences.getInt("clickMagalu", 0))
-        ebay.text = getString(R.string.statistics_company_clicks, "Ebay", sharedPreferences.getInt("clickEbay", 0))
-        webmotors.text = getString(R.string.statistics_company_clicks, "Webmotors", sharedPreferences.getInt("clickWebmotors", 0))
-        netshoes.text = getString(R.string.statistics_company_clicks, "Netshoes", sharedPreferences.getInt("clickNetshoes", 0))
-        mercadoLivre.text = getString(R.string.statistics_company_clicks, "MercadoLivre", sharedPreferences.getInt("clickMercadoLivre", 0))
-        submarino.text = getString(R.string.statistics_company_clicks, "Submarino", sharedPreferences.getInt("clickSubmarino", 0))
-        americanas.text = getString(R.string.statistics_company_clicks, "Americanas", sharedPreferences.getInt("clickAmericanas", 0))
+        magalu.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickMagalu", 0), "Magalu", sharedPreferences.getInt("clickMagalu", 0))
+        ebay.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickEbay", 0), "Ebay", sharedPreferences.getInt("clickEbay", 0))
+        webmotors.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickWebmotors", 0), "Webmotors", sharedPreferences.getInt("clickWebmotors", 0))
+        netshoes.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickNetshoes", 0), "Netshoes", sharedPreferences.getInt("clickNetshoes", 0))
+        mercadoLivre.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickMercadoLivre", 0), "MercadoLivre", sharedPreferences.getInt("clickMercadoLivre", 0))
+        submarino.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickSubmarino", 0), "Submarino", sharedPreferences.getInt("clickSubmarino", 0))
+        americanas.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickAmericanas", 0), "Americanas", sharedPreferences.getInt("clickAmericanas", 0))
 
         toolbar.setNavigationOnClickListener {
             finish()
