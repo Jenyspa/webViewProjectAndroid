@@ -13,13 +13,13 @@ class AboutActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("statistics", Context.MODE_PRIVATE)
 
-        magalu.text = "Magalu: ${sharedPreferences.getInt("clickMagalu", 0)} cliques."
-        ebay.text = "Ebay: ${sharedPreferences.getInt("clickEbay", 0)} cliques."
-        webmotors.text = "Webmotors: ${sharedPreferences.getInt("clickWebmotors", 0)} cliques."
-        netshoes.text = "Netshoes: ${sharedPreferences.getInt("clickNetshoes", 0)} cliques."
-        mercadoLivre.text = "MercadoLivre: ${sharedPreferences.getInt("clickMercadoLivre", 0)} cliques."
-        submarino.text = "Submarino: ${sharedPreferences.getInt("clickSubmarino", 0)} cliques."
-        americanas.text = "Americanas: ${sharedPreferences.getInt("clickAmericanas", 0)} cliques."
+        magalu.text = getString(R.string.statistics_company_clicks, "Magalu", sharedPreferences.getInt("clickMagalu", 0))
+        ebay.text = getString(R.string.statistics_company_clicks, "Ebay", sharedPreferences.getInt("clickEbay", 0))
+        webmotors.text = getString(R.string.statistics_company_clicks, "Webmotors", sharedPreferences.getInt("clickWebmotors", 0))
+        netshoes.text = getString(R.string.statistics_company_clicks, "Netshoes", sharedPreferences.getInt("clickNetshoes", 0))
+        mercadoLivre.text = getString(R.string.statistics_company_clicks, "MercadoLivre", sharedPreferences.getInt("clickMercadoLivre", 0))
+        submarino.text = getString(R.string.statistics_company_clicks, "Submarino", sharedPreferences.getInt("clickSubmarino", 0))
+        americanas.text = getString(R.string.statistics_company_clicks, "Americanas", sharedPreferences.getInt("clickAmericanas", 0))
 
         toolbar.setNavigationOnClickListener {
             finish()

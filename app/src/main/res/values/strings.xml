@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MyWebViewApplication</string>
+    <string name="about_button">Sobre</string>
+    <string name="statistics_title">App da Jenifer  Jenifer Spinoza</string>
+    <string name="statistics_clean_button">Limpar Estatística</string>
+    <string name="statistics_company_clicks">%s: %d cliques.</string>
+    
 </resources>
