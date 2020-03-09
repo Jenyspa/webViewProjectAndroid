@@ -13,13 +13,13 @@ class AboutActivity : AppCompatActivity() {
 
         val sharedPreferences = getSharedPreferences("statistics", Context.MODE_PRIVATE)
 
-        magalu.text = "Magalu: ${sharedPreferences.getInt("clickMagalu", 0)} cliques."
-        ebay.text = "Ebay: ${sharedPreferences.getInt("clickEbay", 0)} cliques."
-        webmotors.text = "Webmotors: ${sharedPreferences.getInt("clickWebmotors", 0)} cliques."
-        netshoes.text = "Netshoes: ${sharedPreferences.getInt("clickNetshoes", 0)} cliques."
-        mercadoLivre.text = "MercadoLivre: ${sharedPreferences.getInt("clickMercadoLivre", 0)} cliques."
-        submarino.text = "Submarino: ${sharedPreferences.getInt("clickSubmarino", 0)} cliques."
-        americanas.text = "Americanas: ${sharedPreferences.getInt("clickAmericanas", 0)} cliques."
+        magalu.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickMagalu", 0), "Magalu", sharedPreferences.getInt("clickMagalu", 0))
+        ebay.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickEbay", 0), "Ebay", sharedPreferences.getInt("clickEbay", 0))
+        webmotors.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickWebmotors", 0), "Webmotors", sharedPreferences.getInt("clickWebmotors", 0))
+        netshoes.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickNetshoes", 0), "Netshoes", sharedPreferences.getInt("clickNetshoes", 0))
+        mercadoLivre.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickMercadoLivre", 0), "MercadoLivre", sharedPreferences.getInt("clickMercadoLivre", 0))
+        submarino.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickSubmarino", 0), "Submarino", sharedPreferences.getInt("clickSubmarino", 0))
+        americanas.text = resources.getQuantityString (R.plurals.statistics_company_clicks, sharedPreferences.getInt("clickAmericanas", 0), "Americanas", sharedPreferences.getInt("clickAmericanas", 0))
 
         toolbar.setNavigationOnClickListener {
             finish()
