@@ -14,65 +14,17 @@
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="App da Jenifer\n Jenifer Spinoza"
+        android:text="App da Jenifer\nJenifer Spinoza"
         android:layout_marginTop="20dp"
         android:layout_gravity="center"/>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/magalu"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/clickList"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/netshoes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/americanas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/submarino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/ebay"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/webmotors"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/mercadoLivre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_gravity="center"
-        tools:text="Magalu: 5 cliques"/>
+        tools:listitem="@layout/view_holder_clicks"
+        tools:itemCount="7"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/clean_statistics"
