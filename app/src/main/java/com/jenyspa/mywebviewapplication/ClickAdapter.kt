@@ -11,12 +11,11 @@ class ClickAdapter(
     private val companies: List<Company>
 ) : RecyclerView.Adapter<ClickViewHolder>() {
 
-    override fun getItemCount(): Int {
-        return companies.size
-    }
+    override fun getItemCount() = companies.size
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClickViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.view_holder_clicks, null, false)
+        val view = LayoutInflater.from(parent.context)
+            .inflate(R.layout.view_holder_clicks, null, false)
         return ClickViewHolder(view)
     }
 

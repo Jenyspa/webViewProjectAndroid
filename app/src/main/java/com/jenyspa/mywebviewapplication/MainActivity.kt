@@ -14,8 +14,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
         magalu.setOnClickListener {
             saveSharedPreference("clickMagalu")
             goToActivity("https://www.magazineluiza.com.br/")
@@ -58,8 +56,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun goToActivity(url: String) {
-        val intent = Intent(this, WebViewActivity::class.java)
-        intent.putExtra("url", url)
+        val intent = Intent(this, WebViewActivity::class.java).apply {
+            putExtra("url", url)
+        }
         startActivity(intent)
     }
 

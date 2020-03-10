@@ -11,9 +11,11 @@ class WebViewActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_webview)
 
-        webview.webViewClient = WebViewClient()
-        webview.settings.javaScriptEnabled = true
-        webview.loadUrl(intent.getStringExtra("url"))
+        webview.run {
+            webViewClient = WebViewClient()
+            settings.javaScriptEnabled = true
+            loadUrl(intent.getStringExtra("url"))
+        }
 
         toolbar.setNavigationOnClickListener {
             finish()
